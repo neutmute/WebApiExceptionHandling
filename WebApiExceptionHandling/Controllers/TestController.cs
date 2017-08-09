@@ -110,5 +110,12 @@ namespace WebApiExceptionHandling.Controllers
         {
             return NotFound();
         }
+
+        [Route("ApplicationException")]
+        [HttpGet]
+        public IHttpActionResult ApplicationException()
+        {
+            throw new ApplicationException("This is an application exception");
+        }
     }
 }

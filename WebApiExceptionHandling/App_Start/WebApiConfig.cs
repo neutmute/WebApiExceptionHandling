@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 using System.Web.Http.Filters;
+using WebApiExceptionHandling.Attributes;
 using WebApiExceptionHandling.HelperClasses.Handlers;
 using WebApiExceptionHandling.HelperClasses.Loggers;
 
@@ -25,6 +26,8 @@ namespace WebApiExceptionHandling
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // GlobalConfiguration.Configuration.Filters.Add(new CustomFilterAttribute());
         }
     }
 }
